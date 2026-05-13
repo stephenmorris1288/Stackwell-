@@ -52,7 +52,7 @@ To use a professional domain like `stockwell.studio`:
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/stephenmorris1288/Stackwell-.git
+   git clone https://github.com/stephenmorris1288/Stockwell-.git
    cd stockwell-website
    ```
 2. **Install dependencies**:
