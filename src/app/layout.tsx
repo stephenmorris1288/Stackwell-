@@ -15,7 +15,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Stackwell | Professional Web Design for Local Businesses",
+  title: "Stockwell | Professional Web Design for Local Businesses",
   description: "Affordable, modern, and jargon-free website design for tradespeople and small businesses in Liverpool and the North West.",
 };
 

@@ -9,7 +9,7 @@ export default async function AdminDashboard() {
     <div className="min-h-screen bg-gray-50 pb-12">
       <nav className="bg-navy text-white p-4 sticky top-0 z-10 shadow-md">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
-          <h1 className="text-xl font-bold font-montserrat">Stackwell Admin</h1>
+          <h1 className="text-xl font-bold font-montserrat">Stockwell Admin</h1>
           <div className="text-sm font-medium opacity-80 font-inter">Outreach Dashboard</div>
         </div>
       </nav>

@@ -17,7 +17,7 @@ export default function ContactForm() {
                 </div>
                 <div className="ml-4">
                   <p className="text-lg font-bold text-navy font-montserrat">Email us</p>
-                  <p className="text-slate font-inter">hello@stackwell.studio</p>
+                  <p className="text-slate font-inter">hello@stockwell.studio</p>
                 </div>
               </div>
               <div className="flex items-center">

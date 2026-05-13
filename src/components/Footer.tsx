@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="col-span-1 md:col-span-2">
-            <Link href="/" className="text-2xl font-bold text-white font-montserrat">Stackwell</Link>
+            <Link href="/" className="text-2xl font-bold text-white font-montserrat">Stockwell</Link>
             <p className="mt-4 text-light-grey/80 max-w-xs font-inter">
               Websites that work as hard as you do. Helping local businesses in Liverpool and the North West grow their online presence.
             </p>
@@ -30,7 +30,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="mt-12 pt-8 border-t border-white/10 text-center text-light-grey/60 text-sm font-inter">
-          <p>&copy; {new Date().getFullYear()} Stackwell Studio. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Stockwell Studio. All rights reserved.</p>
           <p className="mt-2">Made with &hearts; in the North West.</p>
         </div>
       </div>

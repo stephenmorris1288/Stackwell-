@@ -16,7 +16,7 @@ export default function Testimonials() {
                 <Star key={i} className="h-5 w-5 fill-current" />
               ))}
             </div>
-            <p className="text-slate italic font-inter">"Stackwell transformed my business. I was getting all my leads from Facebook, but now I have a professional site that customers actually trust. Worth every penny."</p>
+            <p className="text-slate italic font-inter">"Stockwell transformed my business. I was getting all my leads from Facebook, but now I have a professional site that customers actually trust. Worth every penny."</p>
             <div className="mt-6">
               <p className="font-bold text-navy font-montserrat">John Smith</p>
               <p className="text-sm text-slate font-inter">JS Plumbing & Heating, Liverpool</p>
@@ -28,7 +28,7 @@ export default function Testimonials() {
                 <Star key={i} className="h-5 w-5 fill-current" />
               ))}
             </div>
-            <p className="text-slate italic font-inter">"I didn't think I needed a website, but after seeing what Stackwell did for my salon, I'm a believer. It's so easy for clients to find our services and location."</p>
+            <p className="text-slate italic font-inter">"I didn't think I needed a website, but after seeing what Stockwell did for my salon, I'm a believer. It's so easy for clients to find our services and location."</p>
             <div className="mt-6">
               <p className="font-bold text-navy font-montserrat">Sarah Jones</p>
               <p className="text-sm text-slate font-inter">The Beauty Bar, St Helens</p>

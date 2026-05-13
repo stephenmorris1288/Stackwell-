@@ -1,7 +1,7 @@
-# Stackwell Website & Admin Dashboard
+# Stockwell Website & Admin Dashboard
 
 ## Overview
-Stackwell provides professional website design services tailored for local trades and small businesses. This repository contains a high-performance, mobile-first Next.js landing page and an integrated admin dashboard for tracking automated outreach leads.
+Stockwell provides professional website design services tailored for local trades and small businesses. This repository contains a high-performance, mobile-first Next.js landing page and an integrated admin dashboard for tracking automated outreach leads.
 
 ## Tech Stack
 - **Framework**: [Next.js](https://nextjs.org/) (App Router)
@@ -15,25 +15,25 @@ Stackwell provides professional website design services tailored for local trade
 ## Deployment Instructions
 
 ### 1. Database Setup (Turso)
-Stackwell uses Turso as its primary database for lead tracking.
+Stockwell uses Turso as its primary database for lead tracking.
 1. **Create Account**: Sign up at [turso.tech](https://turso.tech).
 2. **Install CLI**: Follow the Turso installation guide for your OS.
 3. **Create Database**:
    ```bash
-   turso db create stackwell-db
+   turso db create stockwell-db
    ```
 4. **Get Credentials**:
-   - URL: `turso db show stackwell-db --url`
-   - Token: `turso db tokens create stackwell-db`
+   - URL: `turso db show stockwell-db --url`
+   - Token: `turso db tokens create stockwell-db`
 5. **Initialize Schema**:
    Run the following SQL command using the Turso CLI to create the `leads` table:
    ```bash
-   turso db shell stackwell-db "CREATE TABLE leads (id TEXT PRIMARY KEY, business_name TEXT NOT NULL, vertical TEXT, town TEXT, website TEXT, phone TEXT, google_maps_url TEXT, email TEXT, contact_name TEXT, status TEXT DEFAULT 'new', website_check_result TEXT, created_at DATETIME DEFAULT CURRENT_TIMESTAMP, updated_at DATETIME DEFAULT CURRENT_TIMESTAMP);"
+   turso db shell stockwell-db "CREATE TABLE leads (id TEXT PRIMARY KEY, business_name TEXT NOT NULL, vertical TEXT, town TEXT, website TEXT, phone TEXT, google_maps_url TEXT, email TEXT, contact_name TEXT, status TEXT DEFAULT 'new', website_check_result TEXT, created_at DATETIME DEFAULT CURRENT_TIMESTAMP, updated_at DATETIME DEFAULT CURRENT_TIMESTAMP);"
    ```
 
 ### 2. Deploy to Vercel
 1. **Push to GitHub**: Fork or push this repository to your own GitHub account.
-2. **Import to Vercel**: Connect your GitHub account to Vercel and import the `stackwell-website` project.
+2. **Import to Vercel**: Connect your GitHub account to Vercel and import the `stockwell-website` project.
 3. **Configure Environment Variables**:
    In the Vercel project settings, add the following under **Environment Variables**:
    - `TURSO_DATABASE_URL`: (Your Turso Database URL)
@@ -41,7 +41,7 @@ Stackwell uses Turso as its primary database for lead tracking.
 4. **Deploy**: Vercel will automatically detect Next.js and deploy the site.
 
 ### 3. Custom Domain Configuration
-To use a professional domain like `stackwell.studio`:
+To use a professional domain like `stockwell.studio`:
 1. In Vercel, go to **Settings > Domains**.
 2. Enter your domain name and click **Add**.
 3. Follow the DNS instructions provided by Vercel to update your domain's A and CNAME records at your registrar (e.g., Namecheap, GoDaddy).
@@ -53,7 +53,7 @@ To use a professional domain like `stackwell.studio`:
 1. **Clone the repository**:
    ```bash
    git clone https://github.com/stephenmorris1288/Stackwell-.git
-   cd stackwell-website
+   cd stockwell-website
    ```
 2. **Install dependencies**:
    ```bash
