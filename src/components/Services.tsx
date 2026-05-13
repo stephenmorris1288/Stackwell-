@@ -4,7 +4,7 @@ export default function Services() {
   const tiers = [
     {
       name: 'Starter',
-      price: 500,
+      price: 299,
       description: 'Perfect for new businesses or a simple online presence.',
       features: [
         'Single Page Design',
@@ -16,7 +16,7 @@ export default function Services() {
     },
     {
       name: 'Standard',
-      price: 900,
+      price: 599,
       description: 'The sweet spot for established local businesses.',
       features: [
         'Up to 5 Pages',
@@ -29,7 +29,7 @@ export default function Services() {
     },
     {
       name: 'Premium',
-      price: 1500,
+      price: 999,
       description: 'For businesses that want the best-in-class experience.',
       features: [
         'Custom Design',
@@ -49,7 +49,7 @@ export default function Services() {
           <h2 className="text-3xl font-extrabold text-navy sm:text-4xl font-montserrat">Our Packages</h2>
           <p className="mt-4 text-xl text-slate font-inter">Simple, transparent pricing with no surprises.</p>
           <div className="mt-4 inline-flex items-center px-4 py-1 rounded-full bg-navy/10 text-navy text-sm font-bold font-montserrat">
-            Maintenance: £75/month for all tiers
+            Maintenance: £50/month for all tiers
           </div>
         </div>
 
