@@ -1,36 +1,84 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Stackwell Website & Admin Dashboard
 
-## Getting Started
+## Overview
+Stackwell provides professional website design services tailored for local trades and small businesses. This repository contains a high-performance, mobile-first Next.js landing page and an integrated admin dashboard for tracking automated outreach leads.
 
-First, run the development server:
+## Tech Stack
+- **Framework**: [Next.js](https://nextjs.org/) (App Router)
+- **Styling**: [Tailwind CSS v4](https://tailwindcss.com/)
+- **Icons**: [Lucide React](https://lucide.dev/)
+- **Database**: [Turso](https://turso.tech/) (LibSQL)
+- **Deployment**: [Vercel](https://vercel.com/)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Deployment Instructions
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 1. Database Setup (Turso)
+Stackwell uses Turso as its primary database for lead tracking.
+1. **Create Account**: Sign up at [turso.tech](https://turso.tech).
+2. **Install CLI**: Follow the Turso installation guide for your OS.
+3. **Create Database**:
+   ```bash
+   turso db create stackwell-db
+   ```
+4. **Get Credentials**:
+   - URL: `turso db show stackwell-db --url`
+   - Token: `turso db tokens create stackwell-db`
+5. **Initialize Schema**:
+   Run the following SQL command using the Turso CLI to create the `leads` table:
+   ```bash
+   turso db shell stackwell-db "CREATE TABLE leads (id TEXT PRIMARY KEY, business_name TEXT NOT NULL, vertical TEXT, town TEXT, website TEXT, phone TEXT, google_maps_url TEXT, email TEXT, contact_name TEXT, status TEXT DEFAULT 'new', website_check_result TEXT, created_at DATETIME DEFAULT CURRENT_TIMESTAMP, updated_at DATETIME DEFAULT CURRENT_TIMESTAMP);"
+   ```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 2. Deploy to Vercel
+1. **Push to GitHub**: Fork or push this repository to your own GitHub account.
+2. **Import to Vercel**: Connect your GitHub account to Vercel and import the `stackwell-website` project.
+3. **Configure Environment Variables**:
+   In the Vercel project settings, add the following under **Environment Variables**:
+   - `TURSO_DATABASE_URL`: (Your Turso Database URL)
+   - `TURSO_AUTH_TOKEN`: (Your Turso Auth Token)
+4. **Deploy**: Vercel will automatically detect Next.js and deploy the site.
 
-## Learn More
+### 3. Custom Domain Configuration
+To use a professional domain like `stackwell.studio`:
+1. In Vercel, go to **Settings > Domains**.
+2. Enter your domain name and click **Add**.
+3. Follow the DNS instructions provided by Vercel to update your domain's A and CNAME records at your registrar (e.g., Namecheap, GoDaddy).
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Local Development
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/stephenmorris1288/Stackwell-.git
+   cd stackwell-website
+   ```
+2. **Install dependencies**:
+   ```bash
+   npm install
+   ```
+3. **Set up Local Env**:
+   Create a `.env.local` file in the root and add your Turso credentials:
+   ```env
+   TURSO_DATABASE_URL=libsql://...
+   TURSO_AUTH_TOKEN=...
+   ```
+4. **Run the app**:
+   ```bash
+   npm run dev
+   ```
+   - Landing Page: `http://localhost:3000`
+   - Admin Dashboard: `http://localhost:3000/admin`
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Project Structure
+- `src/app/page.tsx`: Main landing page assembly.
+- `src/app/admin/page.tsx`: Mobile-friendly admin dashboard for lead tracking.
+- `src/components/`: Reusable UI components (Hero, Services, Contact, etc.).
+- `src/lib/db.ts`: Shared database logic using `@libsql/client`.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+**"Websites that work as hard as you do"**
