@@ -1,0 +1,38 @@
+[
+  {
+    "id": "ec780ba3-e271-4b17-90c1-f0b6b48e89bb",
+    "title": "Develop Landing Page",
+    "assigned_to": "agent-developer",
+    "status": "review"
+  },
+  {
+    "id": "da5e662a-4b04-4796-8aaf-471a5f71e05f",
+    "title": "Setup Lead Gen & Outreach System",
+    "assigned_to": "agent-growth-engineer",
+    "status": "done"
+  },
+  {
+    "id": "dff613da-ff1c-4693-8842-d2374188fa93",
+    "title": "Create Brand Kit",
+    "assigned_to": "agent-designer",
+    "status": "done"
+  },
+  {
+    "id": "350f0a71-aafd-4bb0-b155-43d20aa4e66b",
+    "title": "Design Instagram Presence",
+    "assigned_to": "agent-designer",
+    "status": "done"
+  },
+  {
+    "id": "8c999f15-3470-427b-89ec-5a6cd46aa6d6",
+    "title": "Draft Cold Email Sequence",
+    "assigned_to": "agent-growth-engineer",
+    "status": "done"
+  },
+  {
+    "id": "1159c37a-2d6a-40a1-93f7-f9b335395a32",
+    "title": "Develop Admin Dashboard",
+    "assigned_to": "agent-developer",
+    "status": "in-progress"
+  }
+]
